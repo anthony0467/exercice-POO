@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>Exercice Banque</h1>
+<h1>Exercice Livres</h1>
 
 <?php
 
@@ -19,6 +19,10 @@ spl_autoload_register(function ($class_name) {
     });
 
 
+    $auteur1 = new Auteur('King', 'Stephen');
+
+    echo $auteur1->get_firstName().' ';
+    echo $auteur1->get_lastName().' ';
 
 ?>
     
