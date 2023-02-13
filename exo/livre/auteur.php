@@ -26,6 +26,10 @@ class Auteur{
      function get_firstName(): string{
         return $this-> firstName;
      }
+
+     function __toString() {
+        return $this->get_firstName() . " " . $this->get_lastName();
+     }
     
 }
 

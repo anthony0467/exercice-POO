@@ -59,7 +59,9 @@ class livre{
         return $this-> auteur;
     }
 
-
+    function __toString() {
+        return $this->get_title();
+     }
 
 }
 ?>
