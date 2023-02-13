@@ -39,8 +39,9 @@ echo "Solde =" .$compteCourant->get_solde(). '<br>';
 echo $compteCourant-> credit(50) .'<br>';
 echo $compteCourant-> credit(50) .'<br>';
 echo $compteCourant-> credit(150) .'<br>';
+echo $compteCourant->get_solde(). '<br>';
 
-echo $compteCourant->get_solde();
+echo $compteCourant->virement($livretA, 150);
 
 ?>
     

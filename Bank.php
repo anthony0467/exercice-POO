@@ -57,16 +57,22 @@ class Bank{
 
     public function debit(int $debitSolde){
         $this->set_solde($this->get_solde() - $debitSolde) ;
-        echo "le compte ".$this->libelle. " a été débité de ".$debitSolde;
+        echo "le compte ".$this->libelle. " a été débité de ".$debitSolde."</br>";
     }
 
     public function credit(int $creditSolde){
          $this->set_solde($this->get_solde() + $creditSolde);
-         echo "le compte ".$this->libelle. " a été crédité de ".$creditSolde;
+         echo "le compte ".$this->libelle. " a été crédité de ".$creditSolde."</br>";
     }
 
-
-   
+    // fonction Virement
+    public function virement(Bank $destinataire, $somme){
+      
+        
+        $this->debit($somme);
+        $destinataire->credit($somme);
+        echo "</br>!! le virement a été effectué!!</br>";
+   }
     
 
 }
