@@ -13,6 +13,7 @@ class livre{
         $this-> yearPublication = $yearPublication;
         $this-> price = $price;
         $this-> auteur = $auteur;
+        $this->auteur->addBook($this);
     }
 
     //SET
@@ -59,9 +60,14 @@ class livre{
         return $this-> auteur;
     }
 
-    function __toString() {
-        return $this->get_title();
+    public function __toString() {
+        return $this->get_title(). " " .$this->get_numberPages(). " " .$this->get_yearPublication(). " " .$this->get_price(). " " .$this->get_auteur();
      }
+
+    public function afficherBibliographie(){
+
+        echo $this-> title.'(' .$this-> yearPublication. '): ' .$this-> numberPages. ' pages/ '  .$this-> price. '<br>' ;
+    }
 
 }
 ?>

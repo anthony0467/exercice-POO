@@ -18,11 +18,22 @@ spl_autoload_register(function ($class_name) {
     require_once $class_name . '.php';
     });
 
-
+    // AUTEUR
     $auteur1 = new Auteur('King', 'Stephen');
+    // LIVRE
+    $ca = new Livre('ça',1138,'1986',20, $auteur1);
+    $simetierre = new Livre('Simetierre',374,'1983', 15, $auteur1);
+    $fleau = new Livre('Le Fléau',823,'1978',14, $auteur1);
+    $shining = new Livre('Shining',447,'1977',16, $auteur1);
+
 
     echo $auteur1->get_firstName().' ';
-    echo $auteur1->get_lastName().' ';
+    echo $auteur1->get_lastName().'<br>';
+
+    $ca->afficherBibliographie();
+    $simetierre->afficherBibliographie();
+    $fleau->afficherBibliographie();
+    $shining->afficherBibliographie();
 
 ?>
     
