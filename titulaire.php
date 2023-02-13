@@ -62,20 +62,27 @@
             $diff = date_diff(date_create($date), date_create($aujourdhui));
             return $diff->format('%y ans');
         }
+        // transformer l'objet en string
         public function __toString()
         {
             return $this->get_firstName() . " " . $this->get_lastName();
         }
 
-        public function infoBank(){
-            echo "Le nom du titulaire est " .$this->firstName. " " .$this->lastName. ". Il est agé de " .$this->age($this->date). " ans. Liste des comptes: " .$this->bankAccounts."<br>";
-        }
+        public function afficherInfo(){
+
+            echo "Le nom du titulaire est " .$this. ". Il est agé de " .$this->age($this->date). ". <br>";
+
+            echo 'Liste des comptes: ';
+            echo '<ul>';
+            foreach($this->bankAccounts as $account){
+                echo '<li>' .$account->get_libelle(). '</li><br>';
+            }
+            echo '</ul>';
     }
+}
 
    // $client1 = new Titulaire('Doe', 'John', )
     
 
 
    //echo $client1->age("15-10-1980");
-
-     ?>

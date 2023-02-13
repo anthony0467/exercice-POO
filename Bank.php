@@ -52,10 +52,22 @@ class Bank{
     public function afficherInfos(){
         echo "Le nom du titulaire est ".$this->titulaire->get_firstName()." ".$this->titulaire->get_lastName(). ". Il à un compte: ".$this->libelle. " d'un montant de " .$this->solde. " " .$this->devise; 
     }
-/*
-    public public function debit(){
-        
-    }*/
+
+
+
+    public function debit(int $debitSolde){
+        $this->set_solde($this->get_solde() - $debitSolde) ;
+        echo "le compte ".$this->libelle. " a été débité de ".$debitSolde;
+    }
+
+    public function credit(int $creditSolde){
+         $this->set_solde($this->get_solde() + $creditSolde);
+         echo "le compte ".$this->libelle. " a été crédité de ".$creditSolde;
+    }
+
+
+   
+    
 
 }
 

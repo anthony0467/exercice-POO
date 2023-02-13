@@ -17,20 +17,30 @@
 spl_autoload_register(function ($class_name) {
     require_once $class_name . '.php';
     });
-require('Bank.php');
+
 
 //$client_test = new Bank('Livret A', 1000, 'Euro', 'test');
 
-$client_test = new Titulaire('Doe', 'John', "15-10-1980", 'strasbourg');
+$titulaire1 = new Titulaire('Doe', 'John', "15-10-1980", 'strasbourg');
 
-$livretA = new Bank ("LivretA", 566, "€", $client_test);
+$livretA = new Bank ("LivretA", 566, "€", $titulaire1);
+$compteCourant = new Bank ("CompteCourant", 777, "€", $titulaire1);
 
 //echo $client_test;
-$client_test-> infoBank();
-$livretA-> afficherInfos();
+$titulaire1-> afficherInfo();
+// $livretA-> afficherInfos();
 
+echo $compteCourant-> debit(50) .'<br>';
+echo $compteCourant-> debit(50) .'<br>';
+echo $compteCourant-> debit(150) .'<br>';
 
+echo "Solde =" .$compteCourant->get_solde(). '<br>';
 
+echo $compteCourant-> credit(50) .'<br>';
+echo $compteCourant-> credit(50) .'<br>';
+echo $compteCourant-> credit(150) .'<br>';
+
+echo $compteCourant->get_solde();
 
 ?>
     
