@@ -27,13 +27,7 @@ spl_autoload_register(function ($class_name) {
     $shining = new Livre('Shining',447,'1977',16, $auteur1);
 
 
-    echo $auteur1->get_firstName().' ';
-    echo $auteur1->get_lastName().'<br>';
-
-    $ca->afficherBibliographie();
-    $simetierre->afficherBibliographie();
-    $fleau->afficherBibliographie();
-    $shining->afficherBibliographie();
+    $auteur1->afficherBibliographie();
 
 ?>
     

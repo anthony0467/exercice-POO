@@ -64,10 +64,6 @@ class livre{
         return $this->get_title(). " " .$this->get_numberPages(). " " .$this->get_yearPublication(). " " .$this->get_price(). " " .$this->get_auteur();
      }
 
-    public function afficherBibliographie(){
-
-        echo $this-> title.'(' .$this-> yearPublication. '): ' .$this-> numberPages. ' pages/ '  .$this-> price. '<br>' ;
-    }
 
 }
 ?>

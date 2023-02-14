@@ -11,6 +11,11 @@ class Auteur{
         $this->allBook = [];
     }
 
+
+    public function addBook($book){
+        $this->allBook[] = $book;
+    }
+
     // SET  
     public function set_lastName(string $lastName){
         $this->lastName = $lastName;
@@ -19,7 +24,7 @@ class Auteur{
         $this->firstName = $firstName;
     }
 
-    public function set_allBook(array $allBook){
+    public function set_allBook( $allBook){
         $this->allBook = $allBook;
     }
     //
@@ -32,9 +37,23 @@ class Auteur{
         return $this-> firstName;
      }
 
+     public function get_allBook(){
+        return $this-> allBook;
+     }
+
      public function __toString() {
         return $this->get_firstName() . " " . $this->get_lastName();
      }
+
+     //ajouter toutes les livres et leurs info par auteur
+     public function afficherBibliographie(){
+
+        echo '<h2>Livres de ' .$this. '</h2>';
+        foreach($this->allBook as $book){
+            echo $book->get_title()."(".$book->get_yearPublication().") ".$book->get_numberPages()." pages/ ".$book->get_price()."€<br>" ;
+        }
+        
+    }
     
 }
 
