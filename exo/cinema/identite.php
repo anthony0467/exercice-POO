@@ -1,9 +1,9 @@
 <?php 
-class Realisateur{
-    private string $nom;
-    private string $prenom;
-    private string $sexe;
-    private string $dateNaissance;
+class identite{
+    protected string $nom;
+    protected string $prenom;
+    protected string $sexe;
+    protected string $dateNaissance;
 
     public function __construct(string $prenom, string $nom, string $sexe, string $dateNaissance){
         $this->nom = $nom;

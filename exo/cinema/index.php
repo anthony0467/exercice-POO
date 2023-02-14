@@ -18,7 +18,7 @@ spl_autoload_register(function ($class_name) {
     require_once $class_name . '.php';
     });
 
-  $real1 = new Realisateur('James', 'Cameron', 'H', '16-08-1954');
+  $real1 = new identite('James', 'Cameron', 'H', '16-08-1954');
 
 
   echo $real1->get_prenom()."<br>";
