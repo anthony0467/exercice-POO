@@ -1,5 +1,5 @@
 <?php 
-class identite{
+class Identite{
     protected string $nom;
     protected string $prenom;
     protected string $sexe;
@@ -50,4 +50,3 @@ class identite{
     }
 
 }
-?>
