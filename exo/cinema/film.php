@@ -6,10 +6,10 @@ class film
 	private int $duree;
 	private Realisateur $realisateur;
 	private string $synopsys;
-	private string $genre;
+	private Genre $genre;
 
 
-	public function __construct(string $titre, string $date, int $duree, Realisateur $realisateur, string $synopsys, string $genre)
+	public function __construct(string $titre, string $date, int $duree, Realisateur $realisateur, string $synopsys, Genre $genre)
 	{
 		$this->titre = $titre;
 		$this->date = $date;
@@ -45,7 +45,7 @@ class film
 		$this->synopsys = $synopsys;
 	}
 
-	public function set_genre(string $genre)
+	public function set_genre(Genre $genre)
 	{
 		$this->genre = $genre;
 	}
