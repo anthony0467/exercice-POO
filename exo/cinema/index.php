@@ -21,13 +21,20 @@
 	});
 
 	$real1 = new Realisateur('James', 'Cameron', 'H', '16-08-1954');
-	$acteur1 = new Acteur('Léonardo', 'Dicaprio', 'H', '11-11-1974');
+
+	$acteur1 = new Acteur('Léonardo', 'Dicaprio', 'H', '11-11-1974', 'Jack Dawson');
+
+	$film1 = new Film('Titanic', '1997', '195', $real1, 'Il raconte l\'histoire de deux jeunes passagers du paquebot Titanic en avril 1912. L\'une, Rose, est une passagère de première classe qui tente de se suicider pour se libérer des contraintes imposées par son entourage, et le second, Jack, est un vagabond embarqué à la dernière minute en troisième classe pour retourner aux États-Unis.', 'Drame romantique');
 
 
-	echo $real1->get_prenom() . "<br>";
-	echo $real1->get_nom() . "<br>";
-	echo $real1->get_sexe() . "<br>";
-	echo $real1->get_dateNaissance() . "<br>";
+	$film1->afficherInfoFilm();
+
+
+	//echo $real1->get_prenom() . "<br>";
+	//echo $real1->get_nom() . "<br>";
+	//echo $real1->get_sexe() . "<br>";
+	//echo $real1->get_dateNaissance() . "<br>";
+	//echo $acteur1->get_role() . "<br>";
 
 	?>
 

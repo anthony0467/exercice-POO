@@ -80,4 +80,14 @@ class film
 	{
 		return $this->genre;
 	}
+
+	public function __toString()
+	{
+		return $this->get_titre() . "<br> Date de sortie: " . $this->get_date() . "<br>Durée: " . $this->get_duree() . "minutes <br>";
+	}
+
+	public function afficherInfoFilm()
+	{
+		echo $this . " " . $this->realisateur->get_prenom() . " " . $this->realisateur->get_nom() . "<br> Sexe: " . $this->realisateur->get_sexe() . "<br> Date de naissance: " . $this->realisateur->get_dateNaissance() . "<br> Synopsis: " . $this->get_synopsys() . "<br> Genre:" . $this->get_genre();
+	}
 }
