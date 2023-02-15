@@ -31,7 +31,7 @@
 
 
 
-	echo $acteur3->get_role();
+	echo $role_Batman->afficherRoleActeur();
 
 
 	$genre1 = new Genre(' Drame romantique');

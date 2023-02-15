@@ -48,7 +48,13 @@ class Role
 
 	// afficher
 
-	public function afficherRoleActeur(){
-		
+	public function afficherRoleActeur()
+	{
+		$resultat = 'Le role de : ' . $this . ' a été incarné par <ul>';
+		foreach ($this->acteurRole as $role) {
+
+			$resultat .= '<li>' . $role->get_prenom() . ' ' . $role->get_nom() . '</li>';
+		}
+		return $resultat . '</ul>';
 	}
 }
