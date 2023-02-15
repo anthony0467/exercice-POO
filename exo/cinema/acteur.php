@@ -2,17 +2,18 @@
 
 class Acteur extends Identite
 {
-	private string $role;
+	private Role $role;
 
-	public function __construct($prenom, $nom, $sexe, $dateNaissance, string $role)
+	public function __construct($prenom, $nom, $sexe, $dateNaissance, Role $role)
 	{
 		parent::__construct($prenom, $nom, $sexe, $dateNaissance);
 		$this->role = $role;
+		$this->role->addActeur($this);
 	}
 
 	//SET
 
-	public function set_role(string $role)
+	public function set_role(Role $role)
 	{
 		$this->role = $role;
 	}
