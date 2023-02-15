@@ -2,14 +2,15 @@
 class film
 {
 	private string $titre;
-	private string $date;
+	private int $date;
 	private int $duree;
 	private Realisateur $realisateur;
 	private string $synopsys;
 	private Genre $genre;
+	//private Acteur $acteur;
 
 
-	public function __construct(string $titre, string $date, int $duree, Realisateur $realisateur, string $synopsys, Genre $genre)
+	public function __construct(string $titre, int $date, int $duree, Realisateur $realisateur, string $synopsys, Genre $genre)
 	{
 		$this->titre = $titre;
 		$this->date = $date;
@@ -17,6 +18,8 @@ class film
 		$this->realisateur = $realisateur;
 		$this->synopsys = $synopsys;
 		$this->genre = $genre;
+		$this->genre->addFilm($this);
+		//$this->acteur->addFilm($this);
 	}
 
 	//SET
@@ -25,7 +28,7 @@ class film
 		$this->titre = $titre;
 	}
 
-	public function set_date(string $date)
+	public function set_date(int $date)
 	{
 		$this->date = $date;
 	}

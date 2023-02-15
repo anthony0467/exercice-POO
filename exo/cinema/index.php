@@ -19,27 +19,34 @@
 	spl_autoload_register(function ($class_name) {
 		require_once $class_name . '.php';
 	});
-
+	//REALISATEUR
 	$real1 = new Realisateur('James', 'Cameron', 'H', '16-08-1954');
+	$real2 = new Realisateur('Christopher', 'Nolan', 'H', '18-02-1964');
+	//ROLE
 	$role_Dawson = new Role('Jack Dawson');
 	$role_Batman = new Role('Batman');
+	$role_Joker = new Role('Joker');
 
+	//LISTE ACTEUR
 	$acteur1 = new Acteur('Léonardo', 'Dicaprio', 'H', '11-11-1974', $role_Dawson);
 	$acteur2 = new Acteur('Val', 'Kilmer', 'H', '31-12-1959', $role_Batman);
 	$acteur3 = new Acteur('Christian', 'Bale', 'H', '30-01-1974', $role_Batman);
-	$acteur3 = new Acteur('Ben', 'Affleck', 'H', '15-08-1972', $role_Batman);
-
-
-
-	echo $role_Batman->afficherRoleActeur();
-
-
+	$acteur4 = new Acteur('Ben', 'Affleck', 'H', '15-08-1972', $role_Batman);
+	$acteur5 = new Acteur('Heath', 'Ledger', 'H', '04-04-1979', $role_Joker);
+	// GENRE
 	$genre1 = new Genre(' Drame romantique');
+	$genre2 = new Genre('Action');
+	// FILM
+	$film1 = new Film('Titanic', 1997, 195, $real1, 'Il raconte l\'histoire de deux jeunes passagers du paquebot Titanic en avril 1912. L\'une, Rose, est une passagère de première classe qui tente de se suicider pour se libérer des contraintes imposées par son entourage, et le second, Jack, est un vagabond embarqué à la dernière minute en troisième classe pour retourner aux États-Unis.', $genre1);
+	$film2 = new Film('Batman The dark Knight', 2008, 152, $real2, 'Ce film décrit la confrontation entre Batman, interprété pour la seconde fois par Christian Bale, et son ennemi juré le Joker', $genre2);
+	$film3 = new Film('Batman The dark Knight rises', 2012, 172, $real2, 'Ce film décrit la confrontation entre Batman, interprété pour la seconde fois par Christian Bale, et son ennemi Bane', $genre2);
+	//CASTING
+	$castBatman = new Casting($acteur3, $role_Batman, $film2);
 
-	$film1 = new Film('Titanic', '1997', '195', $real1, 'Il raconte l\'histoire de deux jeunes passagers du paquebot Titanic en avril 1912. L\'une, Rose, est une passagère de première classe qui tente de se suicider pour se libérer des contraintes imposées par son entourage, et le second, Jack, est un vagabond embarqué à la dernière minute en troisième classe pour retourner aux États-Unis.', $genre1);
-
-
-	$film1->afficherInfoFilm();
+	echo $acteur3->afficherFilmographie();
+	echo $genre2->afficherFilmParGenre(); // afficher les films en fonction de leur genre
+	echo $role_Batman->afficherRoleActeur(); // Afficher les acteurs pour un role
+	$film1->afficherInfoFilm(); // afficher les infos d'un film
 
 
 	//echo $real1->get_prenom() . "<br>";
