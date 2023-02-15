@@ -8,5 +8,11 @@ class film{
     private string $genre;
 
 
+	public function __construct)
+	{
+		
+	}
+
+
 }
  ?>
