@@ -28,11 +28,11 @@
 	$role_Joker = new Role('Joker');
 
 	//LISTE ACTEUR
-	$acteur1 = new Acteur('Léonardo', 'Dicaprio', 'H', '11-11-1974', $role_Dawson);
-	$acteur2 = new Acteur('Val', 'Kilmer', 'H', '31-12-1959', $role_Batman);
-	$acteur3 = new Acteur('Christian', 'Bale', 'H', '30-01-1974', $role_Batman);
-	$acteur4 = new Acteur('Ben', 'Affleck', 'H', '15-08-1972', $role_Batman);
-	$acteur5 = new Acteur('Heath', 'Ledger', 'H', '04-04-1979', $role_Joker);
+	$acteur1 = new Acteur('Léonardo', 'Dicaprio', 'H', '11-11-1974');
+	$acteur2 = new Acteur('Val', 'Kilmer', 'H', '31-12-1959');
+	$acteur3 = new Acteur('Christian', 'Bale', 'H', '30-01-1974');
+	$acteur4 = new Acteur('Ben', 'Affleck', 'H', '15-08-1972');
+	$acteur5 = new Acteur('Heath', 'Ledger', 'H', '04-04-1979');
 	// GENRE
 	$genre1 = new Genre(' Drame romantique');
 	$genre2 = new Genre('Action');
@@ -45,7 +45,7 @@
 
 	echo $acteur3->afficherFilmographie();
 	echo $genre2->afficherFilmParGenre(); // afficher les films en fonction de leur genre
-	echo $role_Batman->afficherRoleActeur(); // Afficher les acteurs pour un role
+	echo $film1->afficherRoleActeur(); // Afficher les acteurs pour un role
 	$film1->afficherInfoFilm(); // afficher les infos d'un film
 
 

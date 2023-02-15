@@ -5,11 +5,15 @@ class Casting
 	private Role $role;
 	private Film $film;
 
+
 	public function __construct(Acteur $acteur, Role $role, Film $film)
 	{
 		$this->acteur = $acteur;
 		$this->role = $role;
 		$this->film = $film;
+		$this->acteur->addCasting($this);
+		//$this->role->addCasting($this);
+		$this->film->addCasting($this);
 	}
 
 	//SET
@@ -43,16 +47,5 @@ class Casting
 	public function get_film()
 	{
 		return $this->film;
-	}
-
-	public function __toString()
-	{
-		return $this->get_acteur() . ' ' . $this->get_role() . ' ' . $this->get_film();
-	}
-
-	public function afficherCasting()
-	{
-		$resultat = 'Casting du film ' . $this->get_film()->get_title() . '<br>';
-		return $resultat;
 	}
 }

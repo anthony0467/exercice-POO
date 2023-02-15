@@ -2,36 +2,27 @@
 
 class Acteur extends Identite
 {
-	private Role $role;
-	private array $filmographies;
 
-	public function __construct($prenom, $nom, $sexe, $dateNaissance, Role $role)
+	private array $castings;
+
+	public function __construct($prenom, $nom, $sexe, $dateNaissance)
 	{
 		parent::__construct($prenom, $nom, $sexe, $dateNaissance);
-		$this->role = $role;
-		$this->role->addActeur($this);
-		$this->filmographies = [];
+		$this->castings = [];
 	}
 
-	public function addFilm($film)
+	public function addCasting($casting)
 	{
-		$this->filmographies[] = $film;
+		$this->castings[] = $casting;
 	}
 
 
 	//SET
 
-	public function set_role(Role $role)
-	{
-		$this->role = $role;
-	}
+
 
 	//GET
 
-	public function get_role()
-	{
-		return $this->role;
-	}
 
 	public function __toString()
 	{
@@ -41,9 +32,9 @@ class Acteur extends Identite
 
 	public function afficherFilmographie()
 	{
-		$resultat = 'L\'acteur ' . $this->prenom . ' ' . $this->nom . ' a joué dans les films suivant: <ul>';
-		foreach ($this->filmographies as $film) {
-			$resultat .= '<li>' . $film->get_titre() . '</li>';
+		$resultat = "L'acteur " . $this->prenom . " " . $this->nom . " a joué dans les films suivant: <ul>";
+		foreach ($this->castings as $casting) {
+			$resultat .= "<li>" . $casting->get_film()->get_titre() . " et a joué le rôle de :" . $casting->get_role() . "</li>";
 		}
 		return $resultat . '</ul>';
 	}

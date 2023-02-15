@@ -2,18 +2,18 @@
 class Role
 {
 	private string $role;
-	private array $acteurRole;
+	private array $castings;
 
 	public function __construct(string $role)
 	{
 		$this->role = $role;
-		$this->acteurRole = [];
+		$this->castings = [];
 	}
 
 
-	public function addActeur($acteur)
+	public function addActeur($casting)
 	{
-		$this->acteurRole[] = $acteur;
+		$this->castings[] = $casting;
 	}
 
 
@@ -24,10 +24,10 @@ class Role
 		$this->role = $role;
 	}
 
-	public function set_acteurRole(array $acteurRole)
+	/*public function set_acteurRole(array $acteurRole)
 	{
 		$this->acteurRole = $acteurRole;
-	}
+	}*/
 
 	//GET
 
@@ -36,10 +36,10 @@ class Role
 		return $this->role;
 	}
 
-	public function get_acteurRole()
+	/*public function get_acteurRole()
 	{
 		return $this->acteurRole;
-	}
+	}*/
 
 	public function __toString()
 	{
@@ -48,7 +48,7 @@ class Role
 
 	// afficher
 
-	public function afficherRoleActeur()
+	/*public function afficherRoleActeur()
 	{
 		$resultat = 'Le role de : ' . $this . ' a été incarné par <ul>';
 		foreach ($this->acteurRole as $role) {
@@ -56,5 +56,5 @@ class Role
 			$resultat .= '<li>' . $role->get_prenom() . ' ' . $role->get_nom() . '</li>';
 		}
 		return $resultat . '</ul>';
-	}
+	}*/
 }

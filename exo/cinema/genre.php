@@ -38,7 +38,7 @@ class Genre
 
 	public function afficherFilmParGenre()
 	{
-		$resultat = 'Liste des films classé par genre: ' . $this . '. Nombres de films trouvé:' . count($this->films) . '<ul>';
+		$resultat = 'Liste des films classé par genre: ' . $this . '. Nombres de films trouvé: ' . count($this->films) . '<ul>';
 		foreach ($this->films as $film) {
 			$resultat .= '<li>' . $film->get_titre() . '</li>';
 		}
