@@ -20,6 +20,7 @@ class film
 		$this->synopsys = $synopsys;
 		$this->genre = $genre;
 		$this->genre->addFilm($this);
+		$this->realisateur->addFilm($this);
 		$this->castings = [];
 	}
 

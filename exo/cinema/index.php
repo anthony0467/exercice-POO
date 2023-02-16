@@ -50,10 +50,11 @@
 
 
 
-	echo $acteur3->afficherFilmographie();
+	echo $real2->afficherFilmParReal(); // afficher films par realisateur
 	echo $genre2->afficherFilmParGenre(); // afficher les films en fonction de leur genre
 	echo $role_Batman->afficherActeurFilm(); // afficher le film et l'acteur en fonction du role
 	echo $film2->afficherRoleActeur(); // Afficher les acteurs pour un role
+	echo $acteur3->afficherFilmographie(); // Afficher film et role en fonction de l'acteur
 	// $film1->afficherInfoFilm(); // afficher les infos d'un film
 
 
