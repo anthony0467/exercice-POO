@@ -40,13 +40,21 @@
 	$film1 = new Film('Titanic', 1997, 195, $real1, 'Il raconte l\'histoire de deux jeunes passagers du paquebot Titanic en avril 1912. L\'une, Rose, est une passagère de première classe qui tente de se suicider pour se libérer des contraintes imposées par son entourage, et le second, Jack, est un vagabond embarqué à la dernière minute en troisième classe pour retourner aux États-Unis.', $genre1);
 	$film2 = new Film('Batman The dark Knight', 2008, 152, $real2, 'Ce film décrit la confrontation entre Batman, interprété pour la seconde fois par Christian Bale, et son ennemi juré le Joker', $genre2);
 	$film3 = new Film('Batman The dark Knight rises', 2012, 172, $real2, 'Ce film décrit la confrontation entre Batman, interprété pour la seconde fois par Christian Bale, et son ennemi Bane', $genre2);
+	$film4 = new Film('Batman v Superman', 2016, 152, $real2, 'Batman contre Superman', $genre2);
 	//CASTING
 	$castBatman = new Casting($acteur3, $role_Batman, $film2);
+	$castBatman = new Casting($acteur5, $role_Joker, $film2);
+	$castBatmanVSuperman = new Casting($acteur4, $role_Batman, $film4);
+
+	$castBatman2 = new Casting($acteur3, $role_Batman, $film3);
+
+
 
 	echo $acteur3->afficherFilmographie();
 	echo $genre2->afficherFilmParGenre(); // afficher les films en fonction de leur genre
-	echo $film1->afficherRoleActeur(); // Afficher les acteurs pour un role
-	$film1->afficherInfoFilm(); // afficher les infos d'un film
+	echo $role_Batman->afficherActeurFilm(); // afficher le film et l'acteur en fonction du role
+	echo $film2->afficherRoleActeur(); // Afficher les acteurs pour un role
+	// $film1->afficherInfoFilm(); // afficher les infos d'un film
 
 
 	//echo $real1->get_prenom() . "<br>";

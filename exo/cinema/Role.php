@@ -11,7 +11,7 @@ class Role
 	}
 
 
-	public function addActeur($casting)
+	public function addCasting($casting)
 	{
 		$this->castings[] = $casting;
 	}
@@ -48,13 +48,13 @@ class Role
 
 	// afficher
 
-	/*public function afficherRoleActeur()
+	public function afficherActeurFilm()
 	{
 		$resultat = 'Le role de : ' . $this . ' a été incarné par <ul>';
-		foreach ($this->acteurRole as $role) {
+		foreach ($this->castings as $casting) {
 
-			$resultat .= '<li>' . $role->get_prenom() . ' ' . $role->get_nom() . '</li>';
+			$resultat .= '<li>' . $casting->get_acteur()->get_prenom() . ' ' . $casting->get_acteur()->get_nom() . ' dans le film ' . $casting->get_film()->get_titre() .  '</li>';
 		}
 		return $resultat . '</ul>';
-	}*/
+	}
 }

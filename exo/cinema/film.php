@@ -102,7 +102,7 @@ class film
 
 	public function afficherRoleActeur()
 	{
-		$resultat = "Le film: " . $this->get_titre() . " est interprété par:  <ul>";
+		$resultat = "Le film: " . $this->get_titre() . " à pour casting:  <ul>";
 		foreach ($this->castings as $casting) {
 			$resultat .= "<li>" . $casting->get_acteur()->get_prenom() . " " . $casting->get_acteur()->get_nom() . " dans le role de " . $casting->get_role() . "</li>";
 		}

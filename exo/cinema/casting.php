@@ -12,7 +12,7 @@ class Casting
 		$this->role = $role;
 		$this->film = $film;
 		$this->acteur->addCasting($this);
-		//$this->role->addCasting($this);
+		$this->role->addCasting($this);
 		$this->film->addCasting($this);
 	}
 
