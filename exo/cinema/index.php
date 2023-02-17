@@ -55,7 +55,7 @@
 	echo $role_Batman->afficherActeurFilm(); // afficher le film et l'acteur en fonction du role
 	echo $film2->afficherRoleActeur(); // Afficher les acteurs pour un role
 	echo $acteur3->afficherFilmographie(); // Afficher film et role en fonction de l'acteur
-	// $film1->afficherInfoFilm(); // afficher les infos d'un film
+	 $film1->afficherInfoFilm(); // afficher les infos d'un film
 
 
 	//echo $real1->get_prenom() . "<br>";

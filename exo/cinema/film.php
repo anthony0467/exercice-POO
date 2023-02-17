@@ -29,6 +29,12 @@ class film
 		$this->castings[] = $casting;
 	}
 
+	public function dureeHeure(){
+		$dureeMinuteInHour = gmdate('H:i', $this->duree * 60) ;
+		return $dureeMinuteInHour;
+	}
+
+
 	//SET
 	public function set_titre(string $titre)
 	{
@@ -93,7 +99,7 @@ class film
 
 	public function __toString()
 	{
-		return $this->get_titre() . "<br> Date de sortie: " . $this->get_date() . "<br>Durée: " . $this->get_duree() . "minutes <br>";
+		return $this->get_titre() . "<br> Date de sortie: " . $this->get_date() . "<br>Durée: " . $this->get_duree() . "minutes soit " .$this->dureeHeure()." heures <br>";
 	}
 
 	public function afficherInfoFilm()
